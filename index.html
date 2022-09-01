@@ -4,82 +4,78 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <script src="test.js"></script>
+        <title>Form</title>
     </head>
     <body>
         <div class="container" class="line">
             <div class="row">
                 <div class="col-6">
                     <fieldset>
-                        <legend>Efetuar Registros:</legend>
-                        <form>
-                            <label for="nome">Nome:</label><br>
-                            <input type="text" id="nome" name="nome" required>
+                        <legend>New Registry:</legend>
+                        <form id="myForm">
+                            <label for="name">Name:</label><br>
+                            <input type="text" id="name" name="name" required>
                             <br><br>
-                            <label for="data_nascimento">Data de Nascimento:</label><br>
-                            <input type="date" id="data_nascimento"
-                                name="data_nascimento"> <br/><br/>
+                            <label for="birth_date">Birth Date:</label><br>
+                            <input type="date" id="birth_date"
+                                name="birth_date"> <br/><br/>
 
                                     <label for="email">Email:</label><br>
                                     <input type="email" id="email" name="email"
                                         required>
                                     <br/><br/>
 
-                                            <label for="senha">Senha:</label><br>
-                                            <input type="password" id="senha"
-                                                name="senha"> <br/><br/>
-
-                                                    <label for="sexo">Sexo:</label><br>
-                                                    <select name="sexo"
-                                                        id="sexo" required>
+                                            <label for="password">Password:</label><br>
+                                            <input type="password" id="password"
+                                                name="password"> <br/><br/>
+                                                    <label for="genre">Genre:</label><br>
+                                                    <select name="genre"
+                                                        id="genre" required>
                                                         <option
-                                                            value="masculino">Masculino</option>
+                                                            value="male">Male</option>
                                                         <option
-                                                            value="feminino">Feminino</option>
+                                                            value="female">Female</option>
                                                     </select><br><br>
 
                                                     <label
-                                                        for="telefone_residencial">Telefone
-                                                        Residencial:</label><br>
+                                                        for="phone">Phone:</label><br>
                                                     <input type="number"
-                                                        id="telefone_residencial"
-                                                        name="telefone_residencial"
+                                                        id="phone"
+                                                        name="phone"
                                                         required>
                                                     <br/><br/>
 
                                                             <label
-                                                                for="celular">Celular:</label><br>
+                                                                for="cellphone">Cellphone:</label><br>
                                                             <input type="number"
-                                                                id="celular"
-                                                                name="celular"
+                                                                id="cellphone"
+                                                                name="cellphone"
                                                                 required>
                                                             <br/><br/>
 
                                                                     <label
-                                                                        for="fumante">Fumante:</label><br>
+                                                                        for="smoker">Smoker:</label><br>
                                                                     <select
-                                                                        name="fumante"
-                                                                        id="fumante"
+                                                                        name="smoker"
+                                                                        id="smoker"
                                                                         required>
                                                                         <option
-                                                                            value="sim">Sim</option>
+                                                                            value="yes">Yes</option>
                                                                         <option
-                                                                            value="não">Não</option>
+                                                                            value="no">No</option>
                                                                     </select><br><br>
                                                                     <label
-                                                                        for="municipio_origem">Municípo
-                                                                        de
-                                                                        Origem:</label><br>
+                                                                        for="town">Town:</label><br>
                                                                     <input
                                                                         type="text"
-                                                                        id="municipio_origem"
-                                                                        name="municipio_origem"
+                                                                        id="town"
+                                                                        name="town"
                                                                         required>
                                                                     <br/><br/>
                                                                             <div>
-                                                                                <button>Cancelar</button>
-                                                                                <button
-                                                                                    type="submit">Gravar</button>
+                                                                                <button onclick="cleanFormValues()">Cancel</button>
+                                                                                <button type="submit">Save</button>
                                                                             </div>
                                                                         </form>
                                                                     </fieldset>
@@ -87,95 +83,89 @@
                                                                 <div
                                                                     class="col-6">
                                                                     <fieldset>
-                                                                        <legend>Dados:
+                                                                        <legend>Data:
                                                                         </legend>
-                                                                        <legend>Efetuar
-                                                                            Registros:</legend>
+                                                                        <legend>Persisted Data:</legend>
                                                                         <label
-                                                                            for="nome">Nome:</label><br>
+                                                                            for="persisted_name">Name:</label><br>
                                                                         <input
                                                                             type="text"
-                                                                            id="nome"
-                                                                            name="nome"
+                                                                            id="persisted_name"
+                                                                            name="persisted_name"
                                                                             disabled>
                                                                         <br><br>
                                                                         <label
-                                                                            for="data_nascimento">Data
-                                                                            de
-                                                                            Nascimento:</label><br>
+                                                                            for="persisted_birth_date">Birth Date:</label><br>
                                                                         <input
                                                                             type="date"
-                                                                            id="data_nascimento"
-                                                                            name="data_nascimento"
+                                                                            id="persisted_birth_date"
+                                                                            name="persisted_birth_date"
                                                                             disabled>
                                                                         <br/><br/>
                                                                                 <label
-                                                                                    for="email">Email:</label><br>
+                                                                                    for="persisted_email">Email:</label><br>
                                                                                 <input
-                                                                                    type="email"
-                                                                                    id="email"
-                                                                                    name="email"
+                                                                                    type="persisted_email"
+                                                                                    id="persisted_email"
+                                                                                    name="persisted_email"
                                                                                     disabled>
                                                                                 <br/><br/>
                                                                                         <label
-                                                                                            for="senha">Senha:</label><br>
+                                                                                            for="persisted_password">Password:</label><br>
                                                                                         <input
                                                                                             type="password"
-                                                                                            id="senha"
-                                                                                            name="senha"
+                                                                                            id="persisted_password"
+                                                                                            name="persisted_password"
                                                                                             disabled>
                                                                                         <br/><br/>
                                                                                                 <label
-                                                                                                    for="sexo">Sexo:</label><br>
+                                                                                                    for="persisted_genre">persisted_genre:</label><br>
                                                                                                 <select
-                                                                                                    name="sexo"
-                                                                                                    id="sexo"
+                                                                                                    name="persisted_genre"
+                                                                                                    id="persisted_genre"
                                                                                                     disabled>
                                                                                                     <option
-                                                                                                        value="masculino">Masculino</option>
+                                                                                                        value="male">Male</option>
                                                                                                     <option
-                                                                                                        value="feminino">Feminino</option>
+                                                                                                        value="female">Female</option>
                                                                                                 </select><br><br>
                                                                                                 <label
-                                                                                                    for="telefone_residencial">Telefone
-                                                                                                    Residencial:</label><br>
+                                                                                                    for="persisted_phone">Phone:</label><br>
                                                                                                 <input
                                                                                                     type="number"
-                                                                                                    id="telefone_residencial"
-                                                                                                    name="telefone_residencial"
+                                                                                                    id="persisted_phone"
+                                                                                                    name="persisted_phone"
                                                                                                     disabled>
                                                                                                 <br/><br/>
                                                                                                         <label
-                                                                                                            for="celular">Celular:</label><br>
+                                                                                                            for="persisted_cellphone">Cell Phone:</label><br>
                                                                                                         <input
                                                                                                             type="number"
-                                                                                                            id="celular"
-                                                                                                            name="celular"
+                                                                                                            id="persisted_cellphone"
+                                                                                                            name="persisted_cellphone"
                                                                                                             disabled>
                                                                                                         <br/><br/>
                                                                                                                 <label
-                                                                                                                    for="fumante">Fumante:</label><br>
+                                                                                                                    for="persisted_smoker">Smoker:</label><br>
                                                                                                                 <select
-                                                                                                                    name="fumante"
-                                                                                                                    id="fumante"
+                                                                                                                    name="persisted_smoker"
+                                                                                                                    id="persisted_smoker"
                                                                                                                     disabled>
                                                                                                                     <option
-                                                                                                                        value="sim">Sim</option>
+                                                                                                                        value="yes">Yes</option>
                                                                                                                     <option
-                                                                                                                        value="não">Não</option>
+                                                                                                                        value="no">No</option>
                                                                                                                 </select><br><br>
                                                                                                                 <label
-                                                                                                                    for="municipio_origem">Municípo
-                                                                                                                    de
-                                                                                                                    Origem:</label><br>
+                                                                                                                    for="persisted_town">Town:</label><br>
                                                                                                                 <input
                                                                                                                     type="text"
-                                                                                                                    id="municipio_origem"
-                                                                                                                    name="municipio_origem"
+                                                                                                                    id="persisted_town"
+                                                                                                                    name="persisted_town"
                                                                                                                     disabled>
                                                                                                                 <br/><br/>
                                                                                                                         <div>
-                                                                                                                            <button>Limpar</button>
+                                                                                                                            <button onclick="cleanPersistedValues()">Clear</button>
                                                                                                                         </div>
                                                                                                                     </fieldset>
                                                                                                                 </fieldset>
