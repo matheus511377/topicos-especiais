@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <title>Form</title>
+    </head>
+    <body>
+        <div class="container flex">
+            <div class="child">
+                <fieldset>
+                    <legend>New Registry:</legend>
+                    <form id="myForm">
+                        <div class="flex">
+                            <div class="child">
+                                <label for="name">Name:</label> <br>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="child">
+                                <label for="birth_date">Birth Date:</label> <br>
+                                <input type="date" id="birth_date"
+                                    name="birth_date">
+                            </div>
+                        </div>
+                        <br>
+                                <label for="email">Email:</label><br>
+                                <input type="email" id="email" name="email"
+                                    required>
+                                <br/><br/>
+
+                                        <label for="password">Password:</label><br>
+                                        <input type="password" id="password"
+                                            name="password"> <br/><br/>
+                                                <label for="genre">Genre:</label><br>
+                                                <select name="genre"
+                                                    id="genre" required>
+                                                    <option
+                                                        value="male">Male</option>
+                                                    <option
+                                                        value="female">Female</option>
+                                                </select><br><br>
+
+                                                <label
+                                                    for="phone">Phone:</label><br>
+                                                <input type="number"
+                                                    id="phone"
+                                                    name="phone"
+                                                    required>
+                                                <br/><br/>
+
+                                                        <label
+                                                            for="cellphone">Cellphone:</label><br>
+                                                        <input type="number"
+                                                            id="cellphone"
+                                                            name="cellphone"
+                                                            required>
+                                                        <br/><br/>
+
+                                                                <label
+                                                                    for="smoker">Smoker:</label><br>
+                                                                <select
+                                                                    name="smoker"
+                                                                    id="smoker"
+                                                                    required>
+                                                                    <option
+                                                                        value="yes">Yes</option>
+                                                                    <option
+                                                                        value="no">No</option>
+                                                                </select><br><br>
+                                                                <label
+                                                                    for="town">Town:</label><br>
+                                                                <input
+                                                                    type="text"
+                                                                    id="town"
+                                                                    name="town"
+                                                                    required>
+                                                                    <br><br>
+                                                                        <div>
+                                                                            <button onclick="cleanFormValues()">Cancel</button>
+                                                                            <button type="submit">Save</button>
+                                                                        </div>
+                                                                    </form>
+                                                                 
+                                                                </fieldset>
+            </div>
+            <div class="child">
+                <fieldset>
+                    <legend>Data:
+                    </legend>
+                    <div class="flex">
+                        <div class="child">
+                            <label
+                            for="persisted_name">Name:</label><br>
+                        <input
+                            type="text"
+                            id="persisted_name"
+                            name="persisted_name"
+                            disabled>
+                        </div>
+                        <div class="child">
+                            <label
+                            for="persisted_birth_date">Birth Date:</label><br>
+                        <input
+                            type="date"
+                            id="persisted_birth_date"
+                            name="persisted_birth_date"
+                            disabled>
+                        </div>
+                    </div>
+                    <br>
+                            <label
+                                for="persisted_email">Email:</label><br>
+                            <input
+                                type="persisted_email"
+                                id="persisted_email"
+                                name="persisted_email"
+                                disabled>
+                            <br/><br/>
+                                    <label
+                                        for="persisted_password">Password:</label><br>
+                                    <input
+                                        type="password"
+                                        id="persisted_password"
+                                        name="persisted_password"
+                                        disabled>
+                                    <br/><br/>
+                                            <label
+                                                for="persisted_genre">persisted_genre:</label><br>
+                                            <select
+                                                name="persisted_genre"
+                                                id="persisted_genre"
+                                                disabled>
+                                                <option
+                                                    value="male">Male</option>
+                                                <option
+                                                    value="female">Female</option>
+                                            </select><br><br>
+                                            <label
+                                                for="persisted_phone">Phone:</label><br>
+                                            <input
+                                                type="number"
+                                                id="persisted_phone"
+                                                name="persisted_phone"
+                                                disabled>
+                                            <br/><br/>
+                                                    <label
+                                                        for="persisted_cellphone">Cell Phone:</label><br>
+                                                    <input
+                                                        type="number"
+                                                        id="persisted_cellphone"
+                                                        name="persisted_cellphone"
+                                                        disabled>
+                                                    <br/><br/>
+                                                            <label
+                                                                for="persisted_smoker">Smoker:</label><br>
+                                                            <select
+                                                                name="persisted_smoker"
+                                                                id="persisted_smoker"
+                                                                disabled>
+                                                                <option
+                                                                    value="yes">Yes</option>
+                                                                <option
+                                                                    value="no">No</option>
+                                                            </select><br><br>
+                                                            <label
+                                                                for="persisted_town">Town:</label><br>
+                                                            <input
+                                                                type="text"
+                                                                id="persisted_town"
+                                                                name="persisted_town"
+                                                                disabled>
+                                                            <br/><br/>
+                                                                    <div>
+                                                                        <button onclick="cleanPersistedValues()">Clear</button>
+                                                                    </div>
+                                                                </fieldset>
+            </div>
+        </div>
+    </body>
+</html>
